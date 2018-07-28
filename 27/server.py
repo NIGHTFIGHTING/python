@@ -1,6 +1,12 @@
 # -*-encoding:utf8-*-
 import socketserver
 
+#L617多线程调用self.finish_request(request, client_address)
+#L342 def finish_request(self, request, client_address):
+#中调用self.RequestHandlerClass(request, client_address, self)
+#实例化MyServer对象
+#调用P667def __init__(self, request, client_address, server):
+#P673 self.handle()
 class MyServer(socketserver.BaseRequestHandler):
 
     def handle(self):
