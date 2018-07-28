@@ -28,3 +28,9 @@ print("-------------")
 for i in l:
     print(i)
 
+#文件
+f = open('readme.txt', 'r')
+for i in f:
+    print i
+for i in f.readline():
+    print i
